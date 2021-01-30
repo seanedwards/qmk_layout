@@ -29,8 +29,6 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 #define KC_LOWER MO(L_LOWER)
 #define KC_RAISE MO(L_RAISE)
 
-#define KC_WALKFWD ACTION_TAP_DANCE_DOUBLE(KC_W, LSFT(KC_W))
-
 #define THUMB_CLUSTER KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
 #define LAYOUT_nix(...) LAYOUT_ergodox(__VA_ARGS__)
 
