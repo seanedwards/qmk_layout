@@ -4,7 +4,7 @@ COMMAND_ENABLE   = no # Commands for debug and configuration
 NKRO_ENABLE      = yes # USB Nkey Rollover - for issues, see github.com/tmk/tmk_keyboard/wiki/FAQ#nkro-doesnt-work
 SWAP_HANDS_ENABLE= no # Allow swapping hands of keyboard
 KEY_LOCK_ENABLE  = yes # Enable the KC_LOCK key
-TAP_DANCE_ENABLE = no # Enable the tap dance feature.
+TAP_DANCE_ENABLE = yes # Enable the tap dance feature.
 CONSOLE_ENABLE   = no  # Console for debug
 
 BOOTMAGIC_ENABLE = no  # Virtual DIP switch configuration

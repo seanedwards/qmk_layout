@@ -18,8 +18,18 @@ enum custom_keycodes {
   RGB_SLD
 };
 
+enum td_actions {
+  TD_WALK_FWD
+};
+
+qk_tap_dance_action_t tap_dance_actions[] = {
+  [TD_WALK_FWD] = ACTION_TAP_DANCE_DOUBLE(KC_W, LSFT(KC_W)),
+};
+
 #define KC_LOWER MO(L_LOWER)
 #define KC_RAISE MO(L_RAISE)
+
+#define KC_WALKFWD ACTION_TAP_DANCE_DOUBLE(KC_W, LSFT(KC_W))
 
 #define THUMB_CLUSTER KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
 #define LAYOUT_nix(...) LAYOUT_ergodox(__VA_ARGS__)
@@ -51,7 +61,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [L_GAMES] = LAYOUT_nix( // left fn
   // left hand
   KC_GESC, KC_1      , KC_2  , KC_3  , KC_4  , KC_5, KC_EQL,
-  KC_TAB, KC_Q      , KC_W  , KC_E  , KC_R  , KC_T, G(KC_LBRC),
+  KC_TAB, KC_Q      , TD(TD_WALK_FWD)  , KC_E  , KC_R  , KC_T, G(KC_LBRC),
   KC_BSPC, KC_A      , KC_S  , KC_D  , KC_F  , KC_G,
   KC_LSFT, CTL_T(KC_Z), KC_X  , KC_C  , KC_V  , KC_B, G(KC_RBRC),
   KC_LCTL, KC_PSCR   , KC_SLCK, KC_PAUS, KC_LALT,
